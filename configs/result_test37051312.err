@@ -1,0 +1,40 @@
+2024-07-03 15:13:21.681147: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-03 15:13:21.734205: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-03 15:13:21.734254: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-03 15:13:21.734327: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-03 15:13:21.751215: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-03 15:13:23.034161: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+INFO:Logging has been correctly set up
+2024-07-03 15:13:29.589469: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30963 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:18:00.0, compute capability: 7.0
+2024-07-03 15:13:29.591167: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 30963 MB memory:  -> device: 1, name: Tesla V100-PCIE-32GB, pci bus id: 0000:af:00.0, compute capability: 7.0
+INFO:tensorflow:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0', '/job:localhost/replica:0/task:0/device:GPU:1')
+INFO:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0', '/job:localhost/replica:0/task:0/device:GPU:1')
+INFO:Number of devices: 2
+INFO:Loading data:
+INFO:  For a large dataset, this may take a while...
+INFO:  Number of events loaded: 2437297
+INFO:  Simulation info for pyirf.simulations.SimulatedEventsInfo: {'n_showers': 3860000000.0, 'energy_range_min': 0.006000000052154064, 'energy_range_max': 110.50199890136719, 'max_scatter_range': 1530.300048828125, 'spectral_index': -2.0, 'min_viewcone_radius': 0.0, 'max_viewcone_radius': 7.8420000076293945, 'min_alt': 1.290025234222412, 'max_alt': 1.290025234222412}
+INFO:Setting up model:
+INFO:  Constructing model from config.
+INFO:  Loading weights from '/home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//ctlearn_model/'.
+INFO:  Model has been correctly set up from config.
+INFO:  Compiling model.
+INFO:Predicting...
+Traceback (most recent call last):
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/bin/ctlearn", line 8, in <module>
+    sys.exit(main())
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/ctlearn/run_model.py", line 808, in main
+    run_model(
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/ctlearn/run_model.py", line 410, in run_model
+    predictions = model.predict(data)
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/ctlearn/data_loader.py", line 109, in __getitem__
+    return self.__data_generation(
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/ctlearn/data_loader.py", line 142, in __data_generation
+    event = self.DL1DataReaderDL1DH[index]
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/dl1_data_handler/reader.py", line 2087, in __getitem__
+    filename = list(self.files)[identifiers[0]]
+IndexError: list index out of range
+Closing remaining open files:/home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//example_identifiers_file.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/gamma_theta_10.0_az_102.199_runs301-350.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/gamma_theta_10.0_az_102.199_runs351-400.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/gamma_theta_10.0_az_102.199_runs201-250.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/gamma_theta_10.0_az_102.199_runs251-300.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/gamma_theta_10.0_az_102.199_runs401-450.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/gamma_theta_10.0_az_102.199_runs151-200.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/gamma_theta_10.0_az_102.199_runs451-500.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/gamma_theta_10.0_az_102.199_runs51-100.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/gamma_theta_10.0_az_102.199_runs101-150.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/gamma_theta_10.0_az_102.199_runs1-50.r1.dl1.h5...done

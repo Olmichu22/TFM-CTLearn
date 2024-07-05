@@ -1,0 +1,215 @@
+# Training performed with CTLearn version 0.8.0.post5 and TensorFlow version 2.14.1.
+Data:
+  event_info:
+  - true_alt
+  - true_az
+  - true_shower_primary_id
+  - true_energy
+  - event_id
+  - obs_id
+  file_list:
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs1-50.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs102-151.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs152-201.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs202-251.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs252-301.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs302-351.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs352-401.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs402-450.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs451-500.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs501-550.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs51-101.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs551-600.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs601-650.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs651-700.r1.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/proton_theta_10.0_az_102.199_runs701-750.r1.dl1.h5
+  image_settings:
+    image_channels:
+    - image
+    - peak_time
+  mapping_settings:
+    camera_types:
+    - LSTCam
+    mapping_method:
+      CHEC: oversampling
+      DigiCam: bilinear_interpolation
+      FlashCam: bilinear_interpolation
+      LSTCam: bilinear_interpolation
+      LSTSiPMCam: bilinear_interpolation
+      MAGICCam: bilinear_interpolation
+      NectarCam: bilinear_interpolation
+      SCTCam: oversampling
+    padding:
+      CHEC: 0
+      DigiCam: 2
+      FlashCam: 2
+      LSTCam: 2
+      LSTSiPMCam: 2
+      MAGICCam: 2
+      NectarCam: 2
+      SCTCam: 0
+  mode: mono
+  parameter_settings:
+    parameter_list:
+    - obs_id
+    - event_id
+    - tel_id
+    - hillas_intensity
+    - hillas_skewness
+    - hillas_kurtosis
+    - hillas_fov_lon
+    - hillas_fov_lat
+    - hillas_r
+    - hillas_phi
+    - hillas_length
+    - hillas_length_uncertainty
+    - hillas_width
+    - hillas_width_uncertainty
+    - hillas_psi
+    - timing_intercept
+    - timing_deviation
+    - timing_slope
+    - leakage_pixels_width_1
+    - leakage_pixels_width_2
+    - leakage_intensity_width_1
+    - leakage_intensity_width_2
+    - concentration_cog
+    - concentration_core
+    - concentration_pixel
+    - morphology_n_pixels
+    - morphology_n_islands
+    - morphology_n_small_islands
+    - morphology_n_medium_islands
+    - morphology_n_large_islands
+    - intensity_max
+    - intensity_min
+    - intensity_mean
+    - intensity_std
+    - intensity_skewness
+    - intensity_kurtosis
+    - peak_time_max
+    - peak_time_min
+    - peak_time_mean
+    - peak_time_std
+    - peak_time_skewness
+    - peak_time_kurtosis
+    - core_psi
+  seed: 1234
+  selected_telescope_types:
+  - LST_LST_LSTCam
+  shuffle: false
+  transforms:
+  - !!python/object:dl1_data_handler.transforms.DeltaAltAz_fix_subarray
+    alt_col_name: true_alt
+    az_col_name: true_az
+    base_name: direction
+    deg2rad: true
+    description: []
+    dtype: &id001 !!python/object/apply:numpy.dtype
+      args:
+      - f4
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 0
+    name: deltaAltAz_fix_subarray
+    north_pointing_correction: true
+    shape: 2
+    tel_pointing: !!python/object/apply:numpy.core.multiarray._reconstruct
+      args:
+      - !!python/name:numpy.ndarray ''
+      - !!python/tuple
+        - 0
+      - !!binary |
+        Yg==
+      state: !!python/tuple
+      - 1
+      - !!python/tuple
+        - 2
+      - *id001
+      - false
+      - !!binary |
+        AAAAAAAAAAA=
+    unit: rad
+  - !!python/object:dl1_data_handler.transforms.MCEnergy
+    description: []
+    dtype: *id001
+    energy_col_name: true_energy
+    name: energy
+    shape: 1
+    unit: log(TeV)
+Input:
+  batch_size_per_worker: 64
+  concat_telescopes: false
+Logging:
+  model_directory: /home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data/
+Model:
+  backbone:
+    function: single_cnn_model
+    module: single_cnn
+  head:
+    function: standard_head
+    module: head
+  image_engine:
+    function: stacked_res_blocks
+    module: resnet
+  name: ThinResNet
+Model Parameters:
+  attention:
+    mechanism: Squeeze-and-Excitation
+    ratio: 16
+  resnet:
+    stacked_res_blocks:
+      architecture:
+      - blocks: 2
+        filters: 48
+      - blocks: 3
+        filters: 96
+      - blocks: 3
+        filters: 128
+      - blocks: 3
+        filters: 256
+      residual_block: bottleneck
+  standard_head:
+    direction:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+    energy:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+    type:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+Prediction:
+  prediction_file: /home/olmo.arqueropeinazo/data/temp/logs/test_complete_data/proton_node_corsika_theta_10.0_az_102.199_.h5
+  prediction_file_lists:
+    /home/olmo.arqueropeinazo/data/temp/logs/test_complete_data/gamma_node_corsika_theta_10.0_az_102.199_.h5: /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Gammas/node_corsika_theta_10.0_az_102.199_/
+    /home/olmo.arqueropeinazo/data/temp/logs/test_complete_data/gamma_node_corsika_theta_10.0_az_248.117_.h5: /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_248.117_/
+    /home/olmo.arqueropeinazo/data/temp/logs/test_complete_data/proton_node_corsika_theta_10.0_az_102.199_.h5: /fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TestDataset/Protons/node_corsika_theta_10.0_az_102.199_/
+Reco:
+- type
+Training:
+  adam_epsilon: 1.0e-08
+  base_learning_rate: 0.0001
+  lr_reducing_factor: 0.5
+  lr_reducing_mindelta: 0.01
+  lr_reducing_minlr: 1.0e-05
+  lr_reducing_patience: 5
+  num_epochs: 10
+  optimizer: Adam
+  validation_split: 0.1
+  verbose: 2
+  workers: 1

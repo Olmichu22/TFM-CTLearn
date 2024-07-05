@@ -1,0 +1,65 @@
+LD_LIBRARY_PATH: /home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib:/fefs/aswg/workspace/olmo.arqueropeinazo/local/cuda/lib64:
+Epoch 1/15
+
+Epoch 1: val_loss improved from inf to 0.37332, saving model to /home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//ctlearn_model/
+45699/45699 - 11740s - loss: 0.4477 - accuracy: 0.7574 - auc: 0.8605 - val_loss: 0.3733 - val_accuracy: 0.8130 - val_auc: 0.9089 - lr: 1.0000e-04 - 11740s/epoch - 257ms/step
+Epoch 2/15
+
+Epoch 2: val_loss improved from 0.37332 to 0.35565, saving model to /home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//ctlearn_model/
+45699/45699 - 11656s - loss: 0.3701 - accuracy: 0.8133 - auc: 0.9094 - val_loss: 0.3557 - val_accuracy: 0.8235 - val_auc: 0.9181 - lr: 1.0000e-04 - 11656s/epoch - 255ms/step
+Epoch 3/15
+
+Epoch 3: val_loss improved from 0.35565 to 0.35531, saving model to /home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//ctlearn_model/
+45699/45699 - 11654s - loss: 0.3530 - accuracy: 0.8228 - auc: 0.9178 - val_loss: 0.3553 - val_accuracy: 0.8218 - val_auc: 0.9178 - lr: 1.0000e-04 - 11654s/epoch - 255ms/step
+Epoch 4/15
+
+Epoch 4: val_loss improved from 0.35531 to 0.34197, saving model to /home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//ctlearn_model/
+45699/45699 - 11653s - loss: 0.3432 - accuracy: 0.8290 - auc: 0.9227 - val_loss: 0.3420 - val_accuracy: 0.8310 - val_auc: 0.9245 - lr: 1.0000e-04 - 11653s/epoch - 255ms/step
+Epoch 5/15
+
+Epoch 5: val_loss improved from 0.34197 to 0.34128, saving model to /home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//ctlearn_model/
+45699/45699 - 11653s - loss: 0.3375 - accuracy: 0.8323 - auc: 0.9253 - val_loss: 0.3413 - val_accuracy: 0.8312 - val_auc: 0.9249 - lr: 1.0000e-04 - 11653s/epoch - 255ms/step
+Epoch 6/15
+
+Epoch 6: val_loss did not improve from 0.34128
+45699/45699 - 11630s - loss: 0.3342 - accuracy: 0.8340 - auc: 0.9268 - val_loss: 0.3441 - val_accuracy: 0.8316 - val_auc: 0.9248 - lr: 1.0000e-04 - 11630s/epoch - 254ms/step
+Epoch 7/15
+
+Epoch 7: val_loss improved from 0.34128 to 0.33642, saving model to /home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//ctlearn_model/
+45699/45699 - 11645s - loss: 0.3319 - accuracy: 0.8353 - auc: 0.9280 - val_loss: 0.3364 - val_accuracy: 0.8341 - val_auc: 0.9269 - lr: 1.0000e-04 - 11645s/epoch - 255ms/step
+Epoch 8/15
+
+Epoch 8: val_loss did not improve from 0.33642
+45699/45699 - 11646s - loss: 0.3320 - accuracy: 0.8353 - auc: 0.9279 - val_loss: 0.3449 - val_accuracy: 0.8292 - val_auc: 0.9231 - lr: 1.0000e-04 - 11646s/epoch - 255ms/step
+Epoch 9/15
+
+Epoch 9: val_loss improved from 0.33642 to 0.33553, saving model to /home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//ctlearn_model/
+
+Epoch 9: ReduceLROnPlateau reducing learning rate to 4.999999873689376e-05.
+45699/45699 - 11654s - loss: 0.3330 - accuracy: 0.8352 - auc: 0.9275 - val_loss: 0.3355 - val_accuracy: 0.8349 - val_auc: 0.9277 - lr: 1.0000e-04 - 11654s/epoch - 255ms/step
+Epoch 10/15
+
+Epoch 10: val_loss improved from 0.33553 to 0.32766, saving model to /home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//ctlearn_model/
+45699/45699 - 11654s - loss: 0.3152 - accuracy: 0.8443 - auc: 0.9351 - val_loss: 0.3277 - val_accuracy: 0.8389 - val_auc: 0.9312 - lr: 5.0000e-05 - 11654s/epoch - 255ms/step
+Epoch 11/15
+
+Epoch 11: val_loss did not improve from 0.32766
+45699/45699 - 11643s - loss: 0.3068 - accuracy: 0.8493 - auc: 0.9387 - val_loss: 0.3352 - val_accuracy: 0.8364 - val_auc: 0.9290 - lr: 5.0000e-05 - 11643s/epoch - 255ms/step
+Epoch 12/15
+
+Epoch 12: val_loss improved from 0.32766 to 0.32607, saving model to /home/olmo.arqueropeinazo/data/temp/logs/trial_complete_data//ctlearn_model/
+45699/45699 - 11650s - loss: 0.2998 - accuracy: 0.8531 - auc: 0.9416 - val_loss: 0.3261 - val_accuracy: 0.8405 - val_auc: 0.9320 - lr: 5.0000e-05 - 11650s/epoch - 255ms/step
+Epoch 13/15
+
+Epoch 13: val_loss did not improve from 0.32607
+45699/45699 - 11646s - loss: 0.2929 - accuracy: 0.8572 - auc: 0.9445 - val_loss: 0.3328 - val_accuracy: 0.8400 - val_auc: 0.9317 - lr: 5.0000e-05 - 11646s/epoch - 255ms/step
+Epoch 14/15
+
+Epoch 14: val_loss did not improve from 0.32607
+45699/45699 - 11640s - loss: 0.2882 - accuracy: 0.8607 - auc: 0.9469 - val_loss: 0.3398 - val_accuracy: 0.8406 - val_auc: 0.9311 - lr: 5.0000e-05 - 11640s/epoch - 255ms/step
+Epoch 15/15
+
+Epoch 15: val_loss did not improve from 0.32607
+
+Epoch 15: ReduceLROnPlateau reducing learning rate to 2.499999936844688e-05.
+45699/45699 - 11644s - loss: 0.6072 - accuracy: 0.8634 - auc: 0.9487 - val_loss: 0.3431 - val_accuracy: 0.8380 - val_auc: 0.9292 - lr: 5.0000e-05 - 11644s/epoch - 255ms/step

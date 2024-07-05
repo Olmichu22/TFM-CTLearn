@@ -1,0 +1,96 @@
+# Training performed with CTLearn version 0.7.0 and TensorFlow version 2.9.3.
+#   example_identifiers_file: /fefs/aswg/workspace/olmo.arqueropeinazo/DeepCrab/logs/theta_16.087_az_108.090/LST1_TRN_type/example_identifiers_file.h5
+Reco: ["particletype"]
+
+Logging:
+  model_directory: /home/olmo.arqueropeinazo/data/temp/logs/trial
+
+Data:
+  file_list: /home/olmo.arqueropeinazo/data/file_list.txt
+  image_channels:
+  - image
+  - peak_time
+  mapping_settings:
+    mapping_method:
+      CHEC: oversampling
+      FlashCam: bilinear_interpolation
+      LSTCam: bilinear_interpolation
+      LSTSiPMCam: bilinear_interpolation
+      MAGICCam: bilinear_interpolation
+      NectarCam: bilinear_interpolation
+      SCTCam: oversampling
+    padding:
+      CHEC: 0
+      FlashCam: 2
+      LSTCam: 2
+      LSTSiPMCam: 2
+      MAGICCam: 2
+      NectarCam: 2
+      SCTCam: 0
+  mode: mono
+  parameter_selection:
+  - col_name: hillas_intensity
+    min_value: 50.0
+  selected_telescope_types:
+  - LST_LST_LSTCam
+  shuffle: true
+Input:
+  batch_size_per_worker: 24
+  concat_telescopes: false
+
+Model:
+  backbone:
+    function: single_cnn_model
+    module: single_cnn
+  engine:
+    function: stacked_res_blocks
+    module: resnet
+  head:
+    function: standard_head
+    module: head
+  name: ThinResNet
+Model Parameters:
+  attention:
+    mechanism: Squeeze-and-Excitation
+    ratio: 16
+  resnet:
+    stacked_res_blocks:
+      architecture:
+      - blocks: 2
+        filters: 48
+      - blocks: 3
+        filters: 96
+      - blocks: 3
+        filters: 128
+      - blocks: 3
+        filters: 256
+      residual_block: bottleneck
+  standard_head:
+    direction:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+    energy:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+    particletype:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+
+Training:
+  adam_epsilon: 1.0e-08
+  base_learning_rate: 0.0001
+  lr_reducing_factor: 0.5
+  lr_reducing_mindelta: 0.01
+  lr_reducing_minlr: 1.0e-05
+  lr_reducing_patience: 5
+  num_epochs: 15
+  optimizer: Adam
+  validation_split: 0.1
+  verbose: 2
+  workers: 1
