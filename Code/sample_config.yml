@@ -3,7 +3,11 @@ Data:
   event_info:
   - true_shower_primary_id
   file_list:
-  - gamma.h5
+  - ../data/gamma_theta_16.087_az_108.090_runs1-2.r1.dl1.h5
+  - ../data/gamma_theta_16.087_az_108.090_runs3-4.r1.dl1.h5
+  - ../data/proton_theta_16.087_az_108.090_runs1-2.r1.dl1.h5
+  - ../data/proton_theta_16.087_az_108.090_runs3-4.r1.dl1.h5
+  - ../data/proton_theta_16.087_az_108.090_runs5-6.r1.dl1.h5
   image_settings:
     image_channels:
     - image

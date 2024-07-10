@@ -1,9 +1,13 @@
 import tensorflow as tf
 from tensorflow import keras
-
+from keras.layers import Lambda
 
 # A shape is (N, P_A, C), B shape is (N, P_B, C)
 # D shape is (N, P_A, P_B)
+
+def print_shape(x, layer_name):
+    tf.print(f"{layer_name} shape:", tf.shape(x))
+    return x
 
 class BatchDistanceMatrix(tf.keras.layers.Layer):
     """ Compute the distance matrix between points of a batch of point clouds"""
@@ -84,7 +88,7 @@ class Get_Knn_Index(tf.keras.layers.Layer):
     
     def call(self, inputs):
         D = inputs
-        _, indices = tf.keras.ops.top_k(-D, k=self.k + 1)  # (N, P, K+1)
+        _, indices = tf.math.top_k(-D, k=self.k + 1)  # (N, P, K+1)
         return indices[:, :, 1:]  # (N, P, K)
 
 class MaskCoordShiftLayer(tf.keras.layers.Layer):
@@ -164,8 +168,9 @@ def edge_conv(points, features, num_points, K, channels, with_bn=True, activatio
         # shortcut (características residuales)
 
         sc = keras.layers.Conv2D(channels[-1], kernel_size=(1, 1), strides=1, data_format='channels_last',
-                                 use_bias=False if with_bn else True, kernel_initializer='glorot_normal', name='%s_sc_conv' % name)(tf.keras.ops.expand_dims(features, axis=2))
+                                 use_bias=False if with_bn else True, kernel_initializer='glorot_normal', name='%s_sc_conv' % name)(tf.keras.backend.expand_dims(features, axis=2))
         if with_bn:
+            # x = Lambda(print_shape, arguments={'layer_name': f'{name}_conv{idx}_bn'})(x)
             sc = keras.layers.BatchNormalization(name='%s_sc_bn' % name)(sc)
         sc = SqueezeLayer(name = name + "_SqueezeLayer", axis=2)(sc)
 
