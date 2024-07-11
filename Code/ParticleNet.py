@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow import keras
 from keras.layers import Lambda
+import sys
 
 # A shape is (N, P_A, C), B shape is (N, P_B, C)
 # D shape is (N, P_A, P_B)
@@ -180,7 +181,7 @@ def edge_conv(points, features, num_points, K, channels, with_bn=True, activatio
         else:
             return output
 
-def _particle_net_base(points, features=None, mask=None, setting=None, name='particle_net'):
+def _particle_net_base(points, features=None, mask=None, model_params=None, name='particle_net'):
     # points : (N, P, C_coord)
     # features:  (N, P, C_features), optional
     # mask: (N, P, 1), optinal
@@ -190,12 +191,14 @@ def _particle_net_base(points, features=None, mask=None, setting=None, name='par
             features = points
 
         if mask is not None:
-            coord_shift = MaskCoordShiftLayer()(mask)
+            shift_value = model_params.get("Mask",{}).get("shift") if model_params.get("Mask",{}).get("shift") is not None else 999
+            coord_shift = MaskCoordShiftLayer(shift_value=shift_value)(mask)
 
         fts = BatchNormalLayerfts(name = name)(features)
         
-        for layer_idx, layer_param in enumerate(setting["conv_params"]):
-            K, channels = layer_param
+        for layer_idx, layer_param in enumerate(model_params["EdgeConv"]["convparams"]):
+            K = layer_param["K"]
+            channels = layer_param["channels"]
             # A los supuestos puntos (posteriores características) se le añade 999 si no son válidos (es decir, si es un relleno)
             if layer_idx == 0:
                 pts = AddShifttoCoordLayer(name = "AddShifttoCoordLayer"+"_layer_"+str(layer_idx))([coord_shift, points])
@@ -203,27 +206,33 @@ def _particle_net_base(points, features=None, mask=None, setting=None, name='par
                 pts = AddShifttoCoordLayer(name = "AddShifttoCoordLayer"+"_layer_"+str(layer_idx))([coord_shift, fts])
             # pts = tf.keras.layers.Add()([coord_shift, points]) if layer_idx == 0 else tf.keras.layers.Add()([coord_shift, fts])
             
-            fts = edge_conv(pts, fts, setting["num_points"], K, channels, with_bn=True, activation='relu',
-                            pooling=setting["conv_pooling"], name='%s_%s%d' % (name, 'EdgeConv', layer_idx))
+            pooling = model_params.get("EdgeConv",{}).get("pooling") if model_params.get("EdgeConv",{}).get("pooling") is not None else "average"
+            with_bn = model_params.get("EdgeConv",{}).get("BN") if model_params.get("EdgeConv",{}).get("BN") is not None else True
+            activation = model_params.get("EdgeConv",{}).get("activation") if model_params.get("EdgeConv",{}).get("activation") is not None else "relu"
+            fts = edge_conv(pts, fts, model_params["num_points"], K, channels, with_bn = with_bn, activation = activation,
+                            pooling=pooling, name='%s_%s%d' % (name, 'EdgeConv', layer_idx))
 
         if mask is not None:
             fts = tf.keras.layers.Multiply(name = "Apply_Mask_Layer")([fts, mask])
 
-        pool = ReduceLayer(name = "FinalPool", pooling = "average", axis = 1)(fts)  # (N, C)
+        final_pooling = model_params.get("FinalPooling") if model_params.get("FinalPooling") is not None else "average"
+        pool = ReduceLayer(name = "FinalPool", pooling = final_pooling, axis = 1)(fts)  # (N, C)
 
-        if setting["fc_params"] is not None:
+        if model_params.get("ConvHead") is not None:
             x = pool
-            for layer_idx, layer_param in enumerate(setting["fc_params"]):
-                units, drop_rate = layer_param
-                x = keras.layers.Dense(units, activation='relu')(x)
+            for layer_idx, layer_param in enumerate(model_params["ConvHead"]["params"]):
+                units = layer_param["units"]
+                drop_rate = layer_param["drop_rate"]
+                activation = layer_param["activation"]
+                x = keras.layers.Dense(units, activation=activation)(x)
                 if drop_rate is not None and drop_rate > 0:
                     x = keras.layers.Dropout(drop_rate)(x)
-            out = keras.layers.Dense(setting["num_class"], activation='softmax')(x)
+            out = keras.layers.Dense(model_params["num_classes"], activation='softmax')(x)
             return out  # (N, num_classes)
         else:
             return pool
 
-def get_particle_net(num_classes, input_shapes, setting=None):
+def get_particle_net(data, model_params=None):
     r"""ParticleNet model from `"ParticleNet: Jet Tagging via Particle Clouds"
     <https://arxiv.org/abs/1902.08570>`_ paper.
     Parameters
@@ -233,25 +242,28 @@ def get_particle_net(num_classes, input_shapes, setting=None):
     input_shapes : dict
         The shapes of each input (`points`, `features`, `mask`).
     """
-    if setting is None:
-      setting = dict()
-      # conv_params: list of tuple in the format (K, (C1, C2, C3))
-      setting["conv_params"] = [
-          (16, (64, 64, 64)),
-          (16, (128, 128, 128)),
-          (16, (256, 256, 256)),
-          ]
-      # conv_pooling: 'average' or 'max'
-      setting["conv_pooling"] = 'average'
-      # fc_params: list of tuples in the format (C, drop_rate)
-      setting["fc_params"] = [(256, 0.1)]
-    setting["num_class"] = num_classes
-    setting["num_points"] = input_shapes['points'][0]
+    
+    if model_params is None:
+        model_params = dict()
+        # conv_params: list of tuple in the format (K, (C1, C2, C3))
+        model_params["EdgeConv"] = dict()
+        model_params["EdgeConv"]["convparams"] = [{"K":16, "channels":(64, 64, 64)},
+                                                    {"K":16, "channels":(128, 128, 128)},
+                                                    {"K":16, "channels":(256, 256, 256)}]
+    else:
+        sys.path.append(model_params["model_directory"])
 
-    points = keras.Input(name='points', shape=input_shapes['points'])
-    features = keras.Input(name='features', shape=input_shapes['features']) if 'features' in input_shapes else None
-    mask = keras.Input(name='mask', shape=input_shapes['mask']) if 'mask' in input_shapes else None
-    outputs = _particle_net_base(points, features, mask, setting, name='ParticleNet')
-
-    return keras.Model(inputs=[points, features, mask], outputs=outputs, name='ParticleNet')
-
+    # if data.pc_pos is not None:
+    #     points = keras.Input(name='points', shape=data.input_shapes['points'])
+    #     features = keras.Input(name='features', shape=data.input_shapes['features']) if 'features' in data.input_shapes else None
+    #     mask = keras.Input(name='mask', shape=data.input_shapes['mask']) if 'mask' in data.input_shapes else None
+    #     model_params["num_points"] = data.input_shapes['npoints']
+    #     inputs = [points, features, mask]
+        
+    points = keras.Input(name='points', shape=(500, 2))
+    features = keras.Input(name='features', shape=(500, 2))
+    mask = keras.Input(name='mask', shape=(500, 1))
+    model_params["num_points"] = 500
+    inputs = [points, features, mask]
+    outputs = _particle_net_base(points, features, mask, model_params, name='ParticleNet')
+    return keras.Model(inputs=inputs, outputs=outputs, name='ParticleNet'), inputs

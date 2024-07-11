@@ -18,7 +18,20 @@ class PCDataGenerator(Sequence):
     self.indices = indices
     self.batch_size = batch_size
     self.shuffle = shuffle
+    self.get_data_shape()
     self.on_epoch_end()
+  
+  def get_data_shape(self):
+    self.pc_pos = True
+    with h5py.File(self.hdf5_file, 'r') as f:
+      grp = f[self.indices[0]]
+      self.input_shapes = dict()
+      self.input_shapes['features'] = (None, grp['features'].shape[0], grp['features'].shape[1])
+      self.input_shapes['points'] = (None, grp['points'].shape[0], grp['points'].shape[1])
+      self.input_shapes['mask'] = (None, grp['mask'].shape[0], grp['mask'].shape[1])
+      self.input_shapes["npoints"] = self.input_shapes['points'][1]
+    
+    return
 
   def __len__(self):
     return int(np.floor(len(self.indices) / self.batch_size))
