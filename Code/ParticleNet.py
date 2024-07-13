@@ -259,6 +259,8 @@ def get_particle_net(data, model_params=None):
         mask = keras.Input(name='mask', shape=data.input_shapes['mask']) if 'mask' in data.input_shapes else None
         model_params["num_points"] = data.input_shapes['npoints']
         inputs = {"points" : points, "features": features, "mask": mask}
+    else:
+        raise ValueError("Data must have the point cloud position information to use ParticleNet")
         
     # points = keras.Input(name='points', shape=(500, 2))
     # features = keras.Input(name='features', shape=(500, 2))

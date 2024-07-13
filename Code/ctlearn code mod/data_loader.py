@@ -14,8 +14,9 @@ class KerasBatchGenerator(tf.keras.utils.Sequence):
         class_names=None,
         shuffle=True,
         stack_telescope_images=False,
-        to_pc_options = dict({"point_cloud": False, "max_points": 500, "relative_coords": True}),
+        to_pc_options = dict({"point_cloud": False, "max_points": 500, "relative_coords": True, "n_features": 2, "n_coords": 2}),
     ):
+        # Cambios PC en la entrada
         "Initialization"
         self.DL1DataReaderDL1DH = DL1DataReaderDL1DH
         self.batch_size = batch_size
@@ -25,8 +26,19 @@ class KerasBatchGenerator(tf.keras.utils.Sequence):
         self.shuffle = shuffle
         self.stack_telescope_images = stack_telescope_images
         self.to_pc_options = to_pc_options
+
         self.on_epoch_end()
 
+        # PC Config (CAMBIOS PC)
+        if self.to_pc_options["point_cloud"]:
+            self.input_shapes = dict()
+            self.pc_pos = 0
+            max_points = self.to_pc_options.get("max_points", 500)	
+            self.input_shapes['features'] = (max_points, to_pc_options.get('n_features',2))
+            self.input_shapes['points'] = (max_points, to_pc_options.get('n_coords',2))
+            self.input_shapes['mask'] = (max_points, 1)
+            self.input_shapes["npoints"] = max_points
+        
         # Decrypt the example description
         # Features
         self.singleimg_shape = None
@@ -206,17 +218,18 @@ class KerasBatchGenerator(tf.keras.utils.Sequence):
         if self.prm_pos is not None:
             features["parameters"] = parameters
 
+        # Cambios PC
         if self.to_pc_options["point_cloud"]:
-            if "images" not in features:
+            if "images" not in features.keys():
                 raise ValueError("Images are required to convert to point cloud")
+            
             self.input_shapes = dict()
             max_points = self.to_pc_options.get("max_points", 500)
             relative_coords = self.to_pc_options.get("relative_coords", True)
-            features = ImagetoPointCloud(max_points = max_points, relative_coords = relative_coords)(images)
-            print()
-            self.input_shapes['features'] = (features['features'].shape[1], features['features'].shape[2])
-            self.input_shapes['points'] = (features['points'].shape[1], features['points'].shape[2])
-            self.input_shapes['mask'] = (features['mask'].shape[1], features['mask'].shape[2])
+            features_pc = ImagetoPointCloud(max_points = max_points, relative_coords = relative_coords)(images)
+            self.input_shapes['features'] = (features_pc['features'].shape[1], features_pc['features'].shape[2])
+            self.input_shapes['points'] = (features_pc['points'].shape[1], features_pc['points'].shape[2])
+            self.input_shapes['mask'] = (features_pc['mask'].shape[1], features_pc['mask'].shape[2])
             self.input_shapes["npoints"] = max_points
             
         labels = {}
@@ -244,5 +257,9 @@ class KerasBatchGenerator(tf.keras.utils.Sequence):
         # https://github.com/keras-team/keras/issues/11735
         if len(labels) == 1:
             labels = label
-
-        return features, labels
+         
+        # CAMBIOS PC     
+        if self.to_pc_options["point_cloud"]:
+            return features_pc, labels
+        else:
+            return features, labels
