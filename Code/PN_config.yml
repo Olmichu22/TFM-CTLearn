@@ -32,5 +32,8 @@ Model Parameters:
     - units: 128
       activation: relu
       drop_rate: 0.1
+    - units: 64
+      activation: relu
+      drop_rate: 0.1
   num_classes: 2
  

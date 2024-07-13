@@ -87,13 +87,17 @@ class ImagetoPointCloud():
             dict: Dictionary with the keys "features", "points" and "mask" with the values of the point cloud as np.array
         """
         if len(images.shape) > 3:
-            points_cloud = []
+            points_cloud = {"features": [], "points": [], "mask": []}
             for image in images:
                 self.image_dims = image[:,:,0].shape
                 if self.relative_coords:
                     self.center = (self.image_dims[0] // 2, self.image_dims[1] // 2)
                 processed_image = self.process_image(image)  
-                points_cloud.append(processed_image)
+                points_cloud["features"].append(processed_image["features"])
+                points_cloud["points"].append(processed_image["points"])
+                points_cloud["mask"].append(processed_image["mask"])
+            for key in points_cloud.keys():
+                points_cloud[key] = np.array(points_cloud[key])
             return points_cloud
         else:
             self.image_dims = images[:,:,0].shape

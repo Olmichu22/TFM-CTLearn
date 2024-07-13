@@ -253,17 +253,17 @@ def get_particle_net(data, model_params=None):
     else:
         sys.path.append(model_params["model_directory"])
 
-    # if data.pc_pos is not None:
-    #     points = keras.Input(name='points', shape=data.input_shapes['points'])
-    #     features = keras.Input(name='features', shape=data.input_shapes['features']) if 'features' in data.input_shapes else None
-    #     mask = keras.Input(name='mask', shape=data.input_shapes['mask']) if 'mask' in data.input_shapes else None
-    #     model_params["num_points"] = data.input_shapes['npoints']
-    #     inputs = [points, features, mask]
+    if data.pc_pos is not None:
+        points = keras.Input(name='points', shape=data.input_shapes['points'])
+        features = keras.Input(name='features', shape=data.input_shapes['features']) if 'features' in data.input_shapes else None
+        mask = keras.Input(name='mask', shape=data.input_shapes['mask']) if 'mask' in data.input_shapes else None
+        model_params["num_points"] = data.input_shapes['npoints']
+        inputs = {"points" : points, "features": features, "mask": mask}
         
-    points = keras.Input(name='points', shape=(500, 2))
-    features = keras.Input(name='features', shape=(500, 2))
-    mask = keras.Input(name='mask', shape=(500, 1))
-    model_params["num_points"] = 500
-    inputs = [points, features, mask]
+    # points = keras.Input(name='points', shape=(500, 2))
+    # features = keras.Input(name='features', shape=(500, 2))
+    # mask = keras.Input(name='mask', shape=(500, 1))
+    # model_params["num_points"] = 500
+    # inputs = [points, features, mask]
     outputs = _particle_net_base(points, features, mask, model_params, name='ParticleNet')
     return keras.Model(inputs=inputs, outputs=outputs, name='ParticleNet'), inputs

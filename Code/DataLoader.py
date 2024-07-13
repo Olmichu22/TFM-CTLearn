@@ -2,6 +2,7 @@ import numpy as np
 import h5py
 import keras
 from keras.utils import Sequence
+from sklearn.utils.class_weight import compute_class_weight
 
 class PCDataGenerator(Sequence):
 
@@ -19,6 +20,7 @@ class PCDataGenerator(Sequence):
     self.batch_size = batch_size
     self.shuffle = shuffle
     self.get_data_shape()
+    self.get_data_distribution()
     self.on_epoch_end()
   
   def get_data_shape(self):
@@ -26,11 +28,26 @@ class PCDataGenerator(Sequence):
     with h5py.File(self.hdf5_file, 'r') as f:
       grp = f[self.indices[0]]
       self.input_shapes = dict()
-      self.input_shapes['features'] = (None, grp['features'].shape[0], grp['features'].shape[1])
-      self.input_shapes['points'] = (None, grp['points'].shape[0], grp['points'].shape[1])
-      self.input_shapes['mask'] = (None, grp['mask'].shape[0], grp['mask'].shape[1])
-      self.input_shapes["npoints"] = self.input_shapes['points'][1]
+      self.input_shapes['features'] = (grp['features'].shape[0], grp['features'].shape[1])
+      self.input_shapes['points'] = (grp['points'].shape[0], grp['points'].shape[1])
+      self.input_shapes['mask'] = (grp['mask'].shape[0], grp['mask'].shape[1])
+      self.input_shapes["npoints"] = self.input_shapes['points'][0]
     
+    return
+
+  def get_data_distribution(self):
+    """ Get the distribution of the data labels to obtain the weights for the loss function.
+    """
+    self.class_weight = dict()
+    with h5py.File(self.hdf5_file, 'r') as f:
+      labels = []
+      for idx in self.indices:
+        grp = f[idx]
+        labels.append(grp.attrs['label'])
+      labels = np.array(labels)
+      labels = np.argmax(labels, axis=1)
+      self.class_weight = compute_class_weight(class_weight='balanced', classes = np.unique(labels), y = labels)
+      self.class_weight = dict(enumerate(self.class_weight))
     return
 
   def __len__(self):
