@@ -1,0 +1,230 @@
+# Training performed with CTLearn version 0.9.0 and TensorFlow version 2.14.1.
+Data:
+  event_info:
+  - true_energy
+  example_identifiers_file: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy//example_identifiers_file.h5
+  file_list:
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs1-62.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs123-182.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs183-242.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs243-302.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs303-362.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs363-422.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs423-482.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs483-541.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs542-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs63-122.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_251.910_runs1-60.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_251.910_runs121-180.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_251.910_runs181-240.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_251.910_runs241-300.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_251.910_runs301-360.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_251.910_runs361-420.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_251.910_runs421-480.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_251.910_runs481-540.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_251.910_runs541-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_251.910_runs61-120.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_260.739_runs129-187.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_260.739_runs188-246.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_260.739_runs247-305.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_260.739_runs306-365.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_260.739_runs366-424.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_260.739_runs425-483.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_260.739_runs484-542.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_260.739_runs543-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_260.739_runs66-128.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_260.739_runs7-65.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_99.261_runs1-59.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_99.261_runs118-176.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_99.261_runs177-235.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_99.261_runs236-297.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_99.261_runs298-358.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_99.261_runs359-416.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_99.261_runs417-479.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_99.261_runs480-540.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_99.261_runs541-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_23.161_az_99.261_runs60-117.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_266.360_runs1-60.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_266.360_runs121-180.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_266.360_runs181-240.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_266.360_runs241-300.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_266.360_runs301-360.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_266.360_runs361-420.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_266.360_runs421-480.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_266.360_runs481-540.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_266.360_runs541-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_266.360_runs61-120.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_93.640_runs1-60.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_93.640_runs121-180.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_93.640_runs181-240.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_93.640_runs241-300.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_93.640_runs301-360.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_93.640_runs361-420.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_93.640_runs421-480.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_93.640_runs481-540.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_93.640_runs541-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_30.390_az_93.640_runs61-120.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_270.641_runs1-60.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_270.641_runs121-180.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_270.641_runs181-240.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_270.641_runs241-300.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_270.641_runs301-360.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_270.641_runs361-420.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_270.641_runs421-480.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_270.641_runs481-540.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_270.641_runs541-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_270.641_runs61-120.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_89.359_runs1-60.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_89.359_runs121-180.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_89.359_runs181-240.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_89.359_runs241-300.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_89.359_runs301-360.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_89.359_runs361-420.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_89.359_runs421-480.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_89.359_runs481-540.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_89.359_runs541-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_37.661_az_89.359_runs61-120.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_6.000_az_180.000_runs1-60.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_6.000_az_180.000_runs121-180.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_6.000_az_180.000_runs181-240.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_6.000_az_180.000_runs241-300.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_6.000_az_180.000_runs301-360.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_6.000_az_180.000_runs361-420.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_6.000_az_180.000_runs421-480.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_6.000_az_180.000_runs481-540.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_6.000_az_180.000_runs541-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_6.000_az_180.000_runs61-120.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_126.888_runs1-60.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_126.888_runs121-180.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_126.888_runs181-240.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_126.888_runs241-300.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_126.888_runs301-360.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_126.888_runs361-420.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_126.888_runs421-480.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_126.888_runs481-540.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_126.888_runs541-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_126.888_runs61-120.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_233.112_runs1-60.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_233.112_runs121-180.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_233.112_runs181-240.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_233.112_runs241-300.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_233.112_runs301-360.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_233.112_runs361-420.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_233.112_runs421-480.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_233.112_runs481-540.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_233.112_runs541-600.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_9.579_az_233.112_runs61-120.dl1.h5
+  image_settings:
+    image_channels:
+    - image
+    - peak_time
+  mapping_settings:
+    camera_types:
+    - LSTCam
+    mapping_method:
+      CHEC: oversampling
+      DigiCam: bilinear_interpolation
+      FlashCam: bilinear_interpolation
+      LSTCam: bilinear_interpolation
+      LSTSiPMCam: bilinear_interpolation
+      MAGICCam: bilinear_interpolation
+      NectarCam: bilinear_interpolation
+      SCTCam: oversampling
+    padding:
+      CHEC: 0
+      DigiCam: 2
+      FlashCam: 2
+      LSTCam: 2
+      LSTSiPMCam: 2
+      MAGICCam: 2
+      NectarCam: 2
+      SCTCam: 0
+  mode: mono
+  parameter_selection:
+  - col_name: hillas_intensity
+    min_value: 50.0
+  selected_telescope_types:
+  - LST_LST_LSTCam
+  shuffle: true
+  transforms:
+  - !!python/object:dl1_data_handler.transforms.LogEnergy
+    description: []
+    dtype: !!python/object/apply:numpy.dtype
+      args:
+      - f4
+      - false
+      - true
+      state: !!python/tuple
+      - 3
+      - <
+      - null
+      - null
+      - null
+      - -1
+      - -1
+      - 0
+    name: energy
+    shape: 1
+    unit: log(TeV)
+Input:
+  batch_size_per_worker: 24
+  stack_telescope_images: false
+Logging:
+  model_directory: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy/
+Model:
+  backbone:
+    function: single_cnn_model
+    module: single_cnn
+  head:
+    function: standard_head
+    module: head
+  image_engine:
+    function: stacked_res_blocks
+    module: resnet
+  name: ThinResNet
+Model Parameters:
+  attention:
+    mechanism: Squeeze-and-Excitation
+    ratio: 16
+  resnet:
+    stacked_res_blocks:
+      architecture:
+      - blocks: 2
+        filters: 48
+      - blocks: 3
+        filters: 96
+      - blocks: 3
+        filters: 128
+      - blocks: 3
+        filters: 256
+      residual_block: bottleneck
+  standard_head:
+    direction:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+    energy:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+    type:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+Reco:
+- energy
+Training:
+  adam_epsilon: 1.0e-08
+  base_learning_rate: 0.0001
+  lr_reducing_factor: 0.5
+  lr_reducing_mindelta: 0.01
+  lr_reducing_minlr: 1.0e-05
+  lr_reducing_patience: 5
+  num_epochs: 15
+  optimizer: Adam
+  validation_split: 0.1
+  verbose: 2
+  workers: 1

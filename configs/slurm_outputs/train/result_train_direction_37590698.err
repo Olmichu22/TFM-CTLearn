@@ -1,0 +1,14 @@
+2024-07-17 09:59:00.739727: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-17 09:59:00.793898: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-17 09:59:00.793948: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-17 09:59:00.794019: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-17 09:59:00.810906: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+usage: git ls-remote [--heads] [--tags]  [-u <exec> | --upload-pack <exec>]
+                     [-q|--quiet] [--exit-code] [--get-url] [<repository> [<refs>...]]
+usage: git ls-remote [--heads] [--tags]  [-u <exec> | --upload-pack <exec>]
+                     [-q|--quiet] [--exit-code] [--get-url] [<repository> [<refs>...]]
+2024-07-17 09:59:20.950664: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30963 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:18:00.0, compute capability: 7.0
+2024-07-17 09:59:20.953451: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 30963 MB memory:  -> device: 1, name: Tesla V100-PCIE-32GB, pci bus id: 0000:af:00.0, compute capability: 7.0
+INFO:tensorflow:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0', '/job:localhost/replica:0/task:0/device:GPU:1')
+slurmstepd: error: *** JOB 37590698 ON gpu01 CANCELLED AT 2024-07-17T10:03:35 ***

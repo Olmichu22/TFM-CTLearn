@@ -1,0 +1,10 @@
+LD_LIBRARY_PATH: /home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-pc/lib:/fefs/aswg/workspace/olmo.arqueropeinazo/local/cuda/lib64:
+Epoch 1/15
+
+Epoch 1: val_loss improved from inf to 2.82930, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/pc_complete_data_type_four_edgeconv//ctlearn_model/
+45699/45699 - 12272s - loss: 0.4600 - accuracy: 0.7532 - auc: 0.8525 - val_loss: 2.8293 - val_accuracy: 0.5710 - val_auc: 0.5886 - lr: 1.0000e-04 - 12272s/epoch - 269ms/step
+Epoch 2/15
+
+Epoch 2: val_loss improved from 2.82930 to 2.79804, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/pc_complete_data_type_four_edgeconv//ctlearn_model/
+45699/45699 - 12215s - loss: 0.4292 - accuracy: 0.7724 - auc: 0.8732 - val_loss: 2.7980 - val_accuracy: 0.5732 - val_auc: 0.5922 - lr: 1.0000e-04 - 12215s/epoch - 267ms/step
+Epoch 3/15

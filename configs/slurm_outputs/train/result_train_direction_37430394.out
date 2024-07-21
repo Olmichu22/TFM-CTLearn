@@ -1,0 +1,6 @@
+LD_LIBRARY_PATH: /home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib:/fefs/aswg/workspace/olmo.arqueropeinazo/local/cuda/lib64:
+Epoch 1/15
+
+Epoch 1: val_loss improved from inf to 0.00901, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction//ctlearn_model/
+19902/19902 - 5161s - loss: 0.0231 - mae_direction: 0.0231 - val_loss: 0.0090 - val_mae_direction: 0.0090 - lr: 1.0000e-04 - 5161s/epoch - 259ms/step
+Epoch 2/15

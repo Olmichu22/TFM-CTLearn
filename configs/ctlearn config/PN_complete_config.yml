@@ -1,0 +1,125 @@
+Data:
+  image_settings:
+    image_channels:
+    - image
+    - peak_time
+  mapping_settings:
+    camera_types:
+    - LSTCam
+    mapping_method:
+      CHEC: oversampling
+      DigiCam: bilinear_interpolation
+      FlashCam: bilinear_interpolation
+      LSTCam: bilinear_interpolation
+      LSTSiPMCam: bilinear_interpolation
+      MAGICCam: bilinear_interpolation
+      NectarCam: bilinear_interpolation
+      SCTCam: oversampling
+    padding:
+      CHEC: 0
+      DigiCam: 2
+      FlashCam: 2
+      LSTCam: 2
+      LSTSiPMCam: 2
+      MAGICCam: 2
+      NectarCam: 2
+      SCTCam: 0
+  mode: mono
+  parameter_selection:
+  - col_name: hillas_intensity
+    min_value: 50.0
+  selected_telescope_types:
+  - LST_LST_LSTCam
+  shuffle: true
+  transforms: []
+
+Input:
+  batch_size_per_worker: 16
+  stack_telescope_images: false
+  to_pc_options:
+    point_cloud: true
+    max_points: 1000
+    relative_coords: true
+Model:
+  backbone:
+    function: get_particle_net
+    module: ParticleNet
+  head:
+    function: standard_head
+    module: head
+  # image_engine:
+  #   function: stacked_res_blocks
+  #   module: resnet
+  # name: ThinResNet
+
+Model Parameters:
+  Mask:
+    shift: 999.
+  EdgeConv:
+    convparams:
+    - K: 32
+      channels:
+      - 48
+      - 48
+      - 48
+    - K: 32
+      channels:
+      - 96
+      - 96
+      - 96
+    - K: 16
+      channels:
+      - 128
+      - 128
+      - 128
+    - K: 16
+      channels:
+      - 256
+      - 256
+      - 256
+    pooling: average
+    BN: true
+    activation: relu
+  FinalPool:
+    pooling: average
+  standard_head:
+    direction:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+    energy:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+    type:
+      fc_head:
+      - 512
+      - 256
+      weight: 1.0
+  # ConvHead:
+  #   params:
+  #   - units: 256
+  #     activation: relu
+  #     drop_rate: 0.1
+  #   - units: 128
+  #     activation: relu
+  #     drop_rate: 0.1
+  #   - units: 64
+  #     activation: relu
+  #     drop_rate: 0.1
+  # num_classes: 2
+
+Training:
+  adam_epsilon: 1.0e-08
+  base_learning_rate: 0.0001
+  lr_reducing_factor: 0.5
+  lr_reducing_mindelta: 0.01
+  lr_reducing_minlr: 1.0e-05
+  lr_reducing_patience: 5
+  num_epochs: 15
+  optimizer: Adam
+  validation_split: 0.1
+  verbose: 2
+  workers: 1

@@ -1,0 +1,149 @@
+2024-07-05 17:22:47.907945: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-05 17:22:47.961471: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-05 17:22:47.961521: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-05 17:22:47.961590: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-05 17:22:47.978480: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-05 17:22:54.303837: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+INFO:Logging has been correctly set up
+2024-07-05 17:23:12.418897: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30963 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:18:00.0, compute capability: 7.0
+2024-07-05 17:23:12.420449: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1886] Created device /job:localhost/replica:0/task:0/device:GPU:1 with 30963 MB memory:  -> device: 1, name: Tesla V100-PCIE-32GB, pci bus id: 0000:af:00.0, compute capability: 7.0
+INFO:tensorflow:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0', '/job:localhost/replica:0/task:0/device:GPU:1')
+INFO:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0', '/job:localhost/replica:0/task:0/device:GPU:1')
+INFO:Number of devices: 2
+INFO:Loading data:
+INFO:  For a large dataset, this may take a while...
+/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/dl1_data_handler/reader.py:1215: PerformanceWarning: 
+your performance may suffer as PyTables will pickle object types that it cannot
+map directly to c-types [inferred_type->mixed-integer,key->axis0] [items->None]
+
+  pd.DataFrame(
+/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/dl1_data_handler/reader.py:1215: PerformanceWarning: 
+your performance may suffer as PyTables will pickle object types that it cannot
+map directly to c-types [inferred_type->mixed-integer,key->block0_items] [items->None]
+
+  pd.DataFrame(
+INFO:  Number of events loaded: 2437297
+INFO:Setting up model:
+INFO:  Constructing model from config.
+INFO:  Model has been correctly set up from config.
+INFO:  Compiling model.
+INFO:Setting up training:
+INFO:  Validation split: 0.1
+INFO:  Number of epochs: 15
+INFO:  Size of the batches per worker: 24
+INFO:  Size of the batches: 48
+INFO:  Number of training steps per epoch: 45699
+INFO:  Optimizer: Adam
+INFO:  Learning rate: 0.0001
+INFO:  Learning rate reducing patience: 5
+INFO:  Learning rate reducing factor: 0.5
+INFO:  Learning rate reducing min delta: 0.01
+INFO:  Learning rate reducing min lr: 1e-05
+INFO:  Verbosity mode: 2
+INFO:  Number of workers: 1
+INFO:  Use of multiprocessing: False
+INFO:  Apply class weights:
+INFO:    Total number: 2437297
+INFO:    Breakdown by 'gamma' (0) with original particle id '0': 1061475
+INFO:    Breakdown by 'proton' (1) with original particle id '101': 1375822
+INFO:    Class weights: {0: 1.1480708448149979, 1: 0.8857602945729899}
+INFO:Training and evaluating...
+INFO:tensorflow:Collective all_reduce tensors: 146 all_reduces, num_devices = 2, group_size = 2, implementation = CommunicationImplementation.NCCL, num_packs = 1
+INFO:Collective all_reduce tensors: 146 all_reduces, num_devices = 2, group_size = 2, implementation = CommunicationImplementation.NCCL, num_packs = 1
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Collective all_reduce tensors: 146 all_reduces, num_devices = 2, group_size = 2, implementation = CommunicationImplementation.NCCL, num_packs = 1
+INFO:Collective all_reduce tensors: 146 all_reduces, num_devices = 2, group_size = 2, implementation = CommunicationImplementation.NCCL, num_packs = 1
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2024-07-05 17:27:43.660481: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 3058761672093241547
+2024-07-05 17:27:43.660617: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 8772799066179334346
+2024-07-05 17:27:43.660670: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 6006558766275305699
+2024-07-05 17:27:43.660711: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 6546495759605310926
+2024-07-05 17:27:43.660748: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 7808916368810688599
+2024-07-05 17:27:43.660784: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 17137909355692849229
+2024-07-05 17:27:43.660827: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 6253646447815031480
+2024-07-05 17:27:43.660866: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 3321153997546736357
+2024-07-05 17:27:43.660902: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 12651205267821203159
+2024-07-05 17:27:43.660937: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 7840830140263256000
+2024-07-05 17:27:43.661071: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 5783986933942215064
+2024-07-05 17:27:43.661126: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 4164671526713820136
+2024-07-05 17:27:43.661169: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 18308260319651866300
+2024-07-05 17:27:43.661206: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 9659420941662210214
+2024-07-05 17:27:43.661242: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 4320047869170264274
+2024-07-05 17:27:43.661289: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 6850408943709170833
+2024-07-05 17:27:43.661333: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 15647191634993507428
+2024-07-05 17:27:43.661373: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 8513801603880300208
+2024-07-05 17:27:43.661411: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 7561846078799318908
+2024-07-05 17:27:43.661453: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 10805768920984088650
+2024-07-05 17:27:43.661489: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 9590482049915203264
+2024-07-05 17:27:43.661527: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 5312280522327004357
+2024-07-05 17:27:43.661563: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 2271479373322574641
+2024-07-05 17:27:43.661603: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 1024200065496349900
+2024-07-05 17:27:43.661642: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 14211480388995464587
+2024-07-05 17:27:43.661680: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 10374444704200236628
+2024-07-05 17:27:43.661717: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 6284873424750182559
+2024-07-05 17:27:43.661757: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 494899871821922787
+2024-07-05 17:27:43.661795: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 12425502928766238978
+2024-07-05 17:27:43.661831: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 2639438893261029426
+2024-07-05 17:27:43.661866: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 7981071486141872160
+2024-07-05 17:27:43.661918: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 8249493855200823564
+2024-07-05 17:27:43.661960: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 11622276467962428012
+2024-07-05 17:27:43.662002: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 13942627396925021148
+2024-07-05 17:27:43.662037: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 14392873405382663505
+2024-07-05 17:27:43.662077: I tensorflow/core/framework/local_rendezvous.cc:421] Local rendezvous recv item cancelled. Key hash: 14648856323114245743
+Traceback (most recent call last):
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/bin/ctlearn", line 8, in <module>
+    sys.exit(main())
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/ctlearn/run_model.py", line 669, in main
+    run_model(config, mode="train", debug=args.debug, log_to_file=args.log_to_file)
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/ctlearn/run_model.py", line 362, in run_model
+    history = model.fit(
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/keras/src/utils/traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/tensorflow/python/eager/execute.py", line 60, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:
+
+Detected at node GatherV2 defined at (most recent call last):
+<stack traces unavailable>
+Detected at node GatherV2 defined at (most recent call last):
+<stack traces unavailable>
+Detected at node GatherV2 defined at (most recent call last):
+<stack traces unavailable>
+3 root error(s) found.
+  (0) INVALID_ARGUMENT:  indices[1] = -1 is not in [0, 2)
+	 [[{{node GatherV2}}]]
+	 [[MultiDeviceIteratorGetNextFromShard]]
+	 [[RemoteCall]]
+	 [[IteratorGetNextAsOptional]]
+	 [[div_no_nan_1/ReadVariableOp_1/_496]]
+	 [[cond/output/_12/_50]]
+  (1) INVALID_ARGUMENT:  indices[1] = -1 is not in [0, 2)
+	 [[{{node GatherV2}}]]
+	 [[MultiDeviceIteratorGetNextFromShard]]
+	 [[RemoteCall]]
+	 [[IteratorGetNextAsOptional]]
+	 [[div_no_nan_1/ReadVariableOp_1/_496]]
+  (2) INVALID_ARGUMENT:  indices[1] = -1 is not in [0, 2)
+	 [[{{node GatherV2}}]]
+	 [[MultiDeviceIteratorGetNextFromShard]]
+	 [[RemoteCall]]
+	 [[IteratorGetNextAsOptional]]
+0 successful operations.
+0 derived errors ignored. [Op:__inference_train_function_36736]
+Closing remaining open files:/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/gamma_theta_16.087_az_108.090_runs63-122.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1302-1351.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1126-1250.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1457-1520.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1621-1670.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1771-1820.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1921-1970.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs2071-2120.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs2221-2271.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs2371-2425.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs626-750.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/gamma_theta_16.087_az_108.090_runs363-422.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/gamma_theta_16.087_az_108.090_runs123-182.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/gamma_theta_16.087_az_108.090_runs483-541.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs250-374.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs125-249.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1521-1570.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1-124.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1352-1401.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1671-1720.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1821-1870.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1971-2020.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs2121-2170.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs2272-2321.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs2426-2474.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs375-499.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/gamma_theta_16.087_az_108.090_runs183-242.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/gamma_theta_16.087_az_108.090_runs243-302.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs876-1000.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1251-1301.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1571-1620.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1001-1125.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1402-1456.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1721-1770.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs1871-1920.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs2021-2070.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs2171-2220.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs2322-2370.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs2475-2540.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs500-625.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/gamma_theta_16.087_az_108.090_runs1-62.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/gamma_theta_16.087_az_108.090_runs303-362.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/gamma_theta_16.087_az_108.090_runs542-600.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/gamma_theta_16.087_az_108.090_runs423-482.r1.dl1.h5...done/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/proton_theta_16.087_az_108.090_runs751-875.r1.dl1.h5...done
+slurmstepd: error: *** JOB 37124380 ON gpu01 CANCELLED AT 2024-07-08T09:01:49 ***

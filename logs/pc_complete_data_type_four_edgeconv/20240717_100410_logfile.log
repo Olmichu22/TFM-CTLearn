@@ -1,0 +1,49 @@
+INFO:Logging has been correctly set up
+INFO:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0', '/job:localhost/replica:0/task:0/device:GPU:1')
+INFO:Number of devices: 2
+INFO:Loading data:
+INFO:  For a large dataset, this may take a while...
+INFO:  Number of events loaded: 2437297
+INFO:Setting up model:
+INFO:  Constructing model from config.
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:  Model has been correctly set up from config.
+INFO:  Compiling model.
+INFO:Setting up training:
+INFO:  Validation split: 0.1
+INFO:  Number of epochs: 15
+INFO:  Size of the batches per worker: 24
+INFO:  Size of the batches: 48
+INFO:  Number of training steps per epoch: 45699
+INFO:  Optimizer: Adam
+INFO:  Learning rate: 0.0001
+INFO:  Learning rate reducing patience: 5
+INFO:  Learning rate reducing factor: 0.5
+INFO:  Learning rate reducing min delta: 0.01
+INFO:  Learning rate reducing min lr: 1e-05
+INFO:  Verbosity mode: 2
+INFO:  Number of workers: 1
+INFO:  Use of multiprocessing: False
+INFO:  Apply class weights:
+INFO:    Total number: 2437297
+INFO:    Breakdown by 'gamma' (0) with original particle id '0': 1061475
+INFO:    Breakdown by 'proton' (1) with original particle id '101': 1375822
+INFO:    Class weights: {0: 1.1480708448149979, 1: 0.8857602945729899}
+INFO:Training and evaluating...
+INFO:Collective all_reduce tensors: 56 all_reduces, num_devices = 2, group_size = 2, implementation = CommunicationImplementation.NCCL, num_packs = 1
+INFO:Collective all_reduce tensors: 56 all_reduces, num_devices = 2, group_size = 2, implementation = CommunicationImplementation.NCCL, num_packs = 1
+INFO:Assets written to: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/pc_complete_data_type_four_edgeconv//ctlearn_model/assets
+INFO:Assets written to: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/pc_complete_data_type_four_edgeconv//ctlearn_model/assets
+INFO:Training and evaluating finished succesfully!
+INFO:Plotting training history: accuracy
+INFO:Plotting training history: auc
+INFO:Plotting training history: loss

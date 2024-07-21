@@ -1,0 +1,65 @@
+LD_LIBRARY_PATH: /home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-pc/lib:/fefs/aswg/workspace/olmo.arqueropeinazo/local/cuda/lib64:
+Epoch 1/15
+
+Epoch 1: val_loss improved from inf to 3.07117, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/pc_complete_data_type_four_edgeconv//ctlearn_model/
+45699/45699 - 18044s - loss: 0.4657 - accuracy: 0.7487 - auc: 0.8478 - val_loss: 3.0712 - val_accuracy: 0.5686 - val_auc: 0.5868 - lr: 1.0000e-04 - 18044s/epoch - 395ms/step
+Epoch 2/15
+
+Epoch 2: val_loss did not improve from 3.07117
+45699/45699 - 17652s - loss: 0.4294 - accuracy: 0.7721 - auc: 0.8729 - val_loss: 3.3411 - val_accuracy: 0.5702 - val_auc: 0.5793 - lr: 1.0000e-04 - 17652s/epoch - 386ms/step
+Epoch 3/15
+
+Epoch 3: val_loss improved from 3.07117 to 2.52000, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/pc_complete_data_type_four_edgeconv//ctlearn_model/
+45699/45699 - 17653s - loss: 0.4189 - accuracy: 0.7789 - auc: 0.8796 - val_loss: 2.5200 - val_accuracy: 0.5709 - val_auc: 0.6028 - lr: 1.0000e-04 - 17653s/epoch - 386ms/step
+Epoch 4/15
+
+Epoch 4: val_loss did not improve from 2.52000
+45699/45699 - 17636s - loss: 0.4123 - accuracy: 0.7829 - auc: 0.8837 - val_loss: 2.7170 - val_accuracy: 0.5740 - val_auc: 0.6157 - lr: 1.0000e-04 - 17636s/epoch - 386ms/step
+Epoch 5/15
+
+Epoch 5: val_loss did not improve from 2.52000
+45699/45699 - 17654s - loss: 0.4074 - accuracy: 0.7861 - auc: 0.8866 - val_loss: 3.8352 - val_accuracy: 0.5696 - val_auc: 0.5799 - lr: 1.0000e-04 - 17654s/epoch - 386ms/step
+Epoch 6/15
+
+Epoch 6: val_loss did not improve from 2.52000
+45699/45699 - 17635s - loss: 0.4038 - accuracy: 0.7880 - auc: 0.8888 - val_loss: 4.4525 - val_accuracy: 0.5709 - val_auc: 0.5767 - lr: 1.0000e-04 - 17635s/epoch - 386ms/step
+Epoch 7/15
+
+Epoch 7: val_loss did not improve from 2.52000
+45699/45699 - 17604s - loss: 0.4009 - accuracy: 0.7899 - auc: 0.8904 - val_loss: 3.8805 - val_accuracy: 0.5681 - val_auc: 0.5761 - lr: 1.0000e-04 - 17604s/epoch - 385ms/step
+Epoch 8/15
+
+Epoch 8: val_loss did not improve from 2.52000
+
+Epoch 8: ReduceLROnPlateau reducing learning rate to 4.999999873689376e-05.
+45699/45699 - 17632s - loss: 0.3987 - accuracy: 0.7911 - auc: 0.8917 - val_loss: 3.0885 - val_accuracy: 0.5751 - val_auc: 0.6020 - lr: 1.0000e-04 - 17632s/epoch - 386ms/step
+Epoch 9/15
+
+Epoch 9: val_loss did not improve from 2.52000
+45699/45699 - 17636s - loss: 0.3914 - accuracy: 0.7954 - auc: 0.8958 - val_loss: 3.7806 - val_accuracy: 0.5768 - val_auc: 0.5890 - lr: 5.0000e-05 - 17636s/epoch - 386ms/step
+Epoch 10/15
+
+Epoch 10: val_loss did not improve from 2.52000
+45699/45699 - 17712s - loss: 0.3899 - accuracy: 0.7962 - auc: 0.8966 - val_loss: 5.4976 - val_accuracy: 0.5684 - val_auc: 0.5762 - lr: 5.0000e-05 - 17712s/epoch - 388ms/step
+Epoch 11/15
+
+Epoch 11: val_loss did not improve from 2.52000
+45699/45699 - 17649s - loss: 0.3888 - accuracy: 0.7969 - auc: 0.8972 - val_loss: 4.2969 - val_accuracy: 0.5698 - val_auc: 0.5807 - lr: 5.0000e-05 - 17649s/epoch - 386ms/step
+Epoch 12/15
+
+Epoch 12: val_loss did not improve from 2.52000
+45699/45699 - 17705s - loss: 0.3880 - accuracy: 0.7972 - auc: 0.8976 - val_loss: 5.1578 - val_accuracy: 0.5708 - val_auc: 0.5754 - lr: 5.0000e-05 - 17705s/epoch - 387ms/step
+Epoch 13/15
+
+Epoch 13: val_loss did not improve from 2.52000
+
+Epoch 13: ReduceLROnPlateau reducing learning rate to 2.499999936844688e-05.
+45699/45699 - 17721s - loss: 0.3871 - accuracy: 0.7980 - auc: 0.8982 - val_loss: 5.2445 - val_accuracy: 0.5707 - val_auc: 0.5762 - lr: 5.0000e-05 - 17721s/epoch - 388ms/step
+Epoch 14/15
+
+Epoch 14: val_loss did not improve from 2.52000
+45699/45699 - 17660s - loss: 0.3833 - accuracy: 0.8000 - auc: 0.9002 - val_loss: 5.5495 - val_accuracy: 0.5719 - val_auc: 0.5786 - lr: 2.5000e-05 - 17660s/epoch - 386ms/step
+Epoch 15/15
+
+Epoch 15: val_loss did not improve from 2.52000
+45699/45699 - 17722s - loss: 0.3826 - accuracy: 0.8005 - auc: 0.9006 - val_loss: 4.7164 - val_accuracy: 0.5732 - val_auc: 0.5817 - lr: 2.5000e-05 - 17722s/epoch - 388ms/step
