@@ -1,0 +1,33 @@
+LD_LIBRARY_PATH: /home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib:/fefs/aswg/workspace/olmo.arqueropeinazo/local/cuda/lib64:
+Epoch 1/8
+
+Epoch 1: val_loss improved from inf to 0.19521, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy_node//ctlearn_model/
+7463/7463 - 4262s - loss: 0.2214 - mae_energy: 0.2214 - val_loss: 0.1952 - val_mae_energy: 0.1952 - lr: 1.0000e-04 - 4262s/epoch - 571ms/step
+Epoch 2/8
+
+Epoch 2: val_loss improved from 0.19521 to 0.18217, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy_node//ctlearn_model/
+7463/7463 - 4186s - loss: 0.1863 - mae_energy: 0.1863 - val_loss: 0.1822 - val_mae_energy: 0.1822 - lr: 1.0000e-04 - 4186s/epoch - 561ms/step
+Epoch 3/8
+
+Epoch 3: val_loss improved from 0.18217 to 0.17673, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy_node//ctlearn_model/
+7463/7463 - 4187s - loss: 0.1798 - mae_energy: 0.1798 - val_loss: 0.1767 - val_mae_energy: 0.1767 - lr: 1.0000e-04 - 4187s/epoch - 561ms/step
+Epoch 4/8
+
+Epoch 4: val_loss improved from 0.17673 to 0.17433, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy_node//ctlearn_model/
+7463/7463 - 4184s - loss: 0.1760 - mae_energy: 0.1760 - val_loss: 0.1743 - val_mae_energy: 0.1743 - lr: 1.0000e-04 - 4184s/epoch - 561ms/step
+Epoch 5/8
+
+Epoch 5: val_loss improved from 0.17433 to 0.17401, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy_node//ctlearn_model/
+7463/7463 - 4187s - loss: 0.1733 - mae_energy: 0.1733 - val_loss: 0.1740 - val_mae_energy: 0.1740 - lr: 1.0000e-04 - 4187s/epoch - 561ms/step
+Epoch 6/8
+
+Epoch 6: val_loss improved from 0.17401 to 0.17307, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy_node//ctlearn_model/
+7463/7463 - 4187s - loss: 0.1711 - mae_energy: 0.1711 - val_loss: 0.1731 - val_mae_energy: 0.1731 - lr: 1.0000e-04 - 4187s/epoch - 561ms/step
+Epoch 7/8
+
+Epoch 7: val_loss improved from 0.17307 to 0.17041, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy_node//ctlearn_model/
+7463/7463 - 4189s - loss: 0.1691 - mae_energy: 0.1691 - val_loss: 0.1704 - val_mae_energy: 0.1704 - lr: 1.0000e-04 - 4189s/epoch - 561ms/step
+Epoch 8/8
+
+Epoch 8: val_loss improved from 0.17041 to 0.17033, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy_node//ctlearn_model/
+7463/7463 - 4189s - loss: 0.1674 - mae_energy: 0.1674 - val_loss: 0.1703 - val_mae_energy: 0.1703 - lr: 1.0000e-04 - 4189s/epoch - 561ms/step

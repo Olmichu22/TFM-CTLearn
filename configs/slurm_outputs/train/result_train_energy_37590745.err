@@ -38,3 +38,6 @@ INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broa
 2024-07-21 14:26:01.809696: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (1): Tesla V100-PCIE-32GB, Compute Capability 7.0
 2024-07-21 14:26:02.364211: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
 2024-07-21 14:26:04.435866: I ./tensorflow/compiler/jit/device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+slurmstepd: error: *** JOB 37590745 ON gpu01 CANCELLED AT 2024-07-22T11:05:51 ***

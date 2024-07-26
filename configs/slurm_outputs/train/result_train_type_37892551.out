@@ -1,0 +1,33 @@
+LD_LIBRARY_PATH: /home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib:/fefs/aswg/workspace/olmo.arqueropeinazo/local/cuda/lib64:
+Epoch 1/8
+
+Epoch 1: val_loss improved from inf to 0.48305, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node//ctlearn_model/
+15210/15210 - 9896s - loss: 0.5131 - accuracy: 0.7183 - auc: 0.8117 - val_loss: 0.4831 - val_accuracy: 0.7387 - val_auc: 0.8360 - lr: 1.0000e-04 - 9896s/epoch - 651ms/step
+Epoch 2/8
+
+Epoch 2: val_loss improved from 0.48305 to 0.44741, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node//ctlearn_model/
+15210/15210 - 8425s - loss: 0.4619 - accuracy: 0.7541 - auc: 0.8524 - val_loss: 0.4474 - val_accuracy: 0.7634 - val_auc: 0.8629 - lr: 1.0000e-04 - 8425s/epoch - 554ms/step
+Epoch 3/8
+
+Epoch 3: val_loss improved from 0.44741 to 0.43894, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node//ctlearn_model/
+15210/15210 - 8426s - loss: 0.4428 - accuracy: 0.7665 - auc: 0.8656 - val_loss: 0.4389 - val_accuracy: 0.7689 - val_auc: 0.8686 - lr: 1.0000e-04 - 8426s/epoch - 554ms/step
+Epoch 4/8
+
+Epoch 4: val_loss improved from 0.43894 to 0.42980, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node//ctlearn_model/
+15210/15210 - 8425s - loss: 0.4312 - accuracy: 0.7738 - auc: 0.8732 - val_loss: 0.4298 - val_accuracy: 0.7757 - val_auc: 0.8747 - lr: 1.0000e-04 - 8425s/epoch - 554ms/step
+Epoch 5/8
+
+Epoch 5: val_loss did not improve from 0.42980
+15210/15210 - 8415s - loss: 0.4230 - accuracy: 0.7785 - auc: 0.8783 - val_loss: 0.4315 - val_accuracy: 0.7707 - val_auc: 0.8724 - lr: 1.0000e-04 - 8415s/epoch - 553ms/step
+Epoch 6/8
+
+Epoch 6: val_loss improved from 0.42980 to 0.42388, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node//ctlearn_model/
+15210/15210 - 8425s - loss: 0.4161 - accuracy: 0.7830 - auc: 0.8826 - val_loss: 0.4239 - val_accuracy: 0.7795 - val_auc: 0.8789 - lr: 1.0000e-04 - 8425s/epoch - 554ms/step
+Epoch 7/8
+
+Epoch 7: val_loss improved from 0.42388 to 0.42327, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node//ctlearn_model/
+15210/15210 - 8431s - loss: 0.4099 - accuracy: 0.7867 - auc: 0.8863 - val_loss: 0.4233 - val_accuracy: 0.7792 - val_auc: 0.8787 - lr: 1.0000e-04 - 8431s/epoch - 554ms/step
+Epoch 8/8
+
+Epoch 8: val_loss improved from 0.42327 to 0.41925, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node//ctlearn_model/
+15210/15210 - 8425s - loss: 0.4040 - accuracy: 0.7902 - auc: 0.8898 - val_loss: 0.4192 - val_accuracy: 0.7817 - val_auc: 0.8812 - lr: 1.0000e-04 - 8425s/epoch - 554ms/step

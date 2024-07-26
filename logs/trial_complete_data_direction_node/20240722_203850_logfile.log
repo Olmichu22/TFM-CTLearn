@@ -1,0 +1,47 @@
+INFO:Logging has been correctly set up
+INFO:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0', '/job:localhost/replica:0/task:0/device:GPU:1')
+INFO:Number of devices: 2
+INFO:Loading data:
+INFO:  For a large dataset, this may take a while...
+INFO:  Number of events loaded: 1061475
+INFO:Setting up model:
+INFO:  Constructing model from config.
+INFO:  Model has been correctly set up from config.
+INFO:  Compiling model.
+INFO:Setting up training:
+INFO:  Validation split: 0.1
+INFO:  Number of epochs: 8
+INFO:  Size of the batches per worker: 64
+INFO:  Size of the batches: 128
+INFO:  Number of training steps per epoch: 7463
+INFO:  Optimizer: Adam
+INFO:  Learning rate: 0.0001
+INFO:  Learning rate reducing patience: 5
+INFO:  Learning rate reducing factor: 0.5
+INFO:  Learning rate reducing min delta: 0.01
+INFO:  Learning rate reducing min lr: 1e-05
+INFO:  Verbosity mode: 2
+INFO:  Number of workers: 1
+INFO:  Use of multiprocessing: False
+INFO:Training and evaluating...
+INFO:Collective all_reduce tensors: 146 all_reduces, num_devices = 2, group_size = 2, implementation = CommunicationImplementation.NCCL, num_packs = 1
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Collective all_reduce tensors: 146 all_reduces, num_devices = 2, group_size = 2, implementation = CommunicationImplementation.NCCL, num_packs = 1
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:Assets written to: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/assets
+INFO:Assets written to: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/assets
+INFO:Assets written to: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/assets
+INFO:Assets written to: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/assets
+INFO:Assets written to: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/assets
+INFO:Assets written to: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/assets
+INFO:Training and evaluating finished succesfully!
+INFO:Plotting training history: loss
+INFO:Plotting training history: mae_direction

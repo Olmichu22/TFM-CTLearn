@@ -1,0 +1,33 @@
+LD_LIBRARY_PATH: /home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib:/fefs/aswg/workspace/olmo.arqueropeinazo/local/cuda/lib64:
+Epoch 1/8
+
+Epoch 1: val_loss improved from inf to 0.28132, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/
+7463/7463 - 6015s - loss: 0.3646 - mae_direction: 0.3646 - val_loss: 0.2813 - val_mae_direction: 0.2813 - lr: 1.0000e-04 - 6015s/epoch - 806ms/step
+Epoch 2/8
+
+Epoch 2: val_loss improved from 0.28132 to 0.26430, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/
+7463/7463 - 5963s - loss: 0.2738 - mae_direction: 0.2738 - val_loss: 0.2643 - val_mae_direction: 0.2643 - lr: 1.0000e-04 - 5963s/epoch - 799ms/step
+Epoch 3/8
+
+Epoch 3: val_loss improved from 0.26430 to 0.25615, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/
+7463/7463 - 5922s - loss: 0.2624 - mae_direction: 0.2624 - val_loss: 0.2561 - val_mae_direction: 0.2561 - lr: 1.0000e-04 - 5922s/epoch - 794ms/step
+Epoch 4/8
+
+Epoch 4: val_loss did not improve from 0.25615
+7463/7463 - 5930s - loss: 0.2560 - mae_direction: 0.2560 - val_loss: 0.2606 - val_mae_direction: 0.2606 - lr: 1.0000e-04 - 5930s/epoch - 795ms/step
+Epoch 5/8
+
+Epoch 5: val_loss improved from 0.25615 to 0.25397, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/
+7463/7463 - 5952s - loss: 0.2516 - mae_direction: 0.2516 - val_loss: 0.2540 - val_mae_direction: 0.2540 - lr: 1.0000e-04 - 5952s/epoch - 798ms/step
+Epoch 6/8
+
+Epoch 6: val_loss improved from 0.25397 to 0.24622, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/
+7463/7463 - 5919s - loss: 0.2486 - mae_direction: 0.2486 - val_loss: 0.2462 - val_mae_direction: 0.2462 - lr: 1.0000e-04 - 5919s/epoch - 793ms/step
+Epoch 7/8
+
+Epoch 7: val_loss did not improve from 0.24622
+7463/7463 - 5906s - loss: 0.2459 - mae_direction: 0.2459 - val_loss: 0.2464 - val_mae_direction: 0.2464 - lr: 1.0000e-04 - 5906s/epoch - 791ms/step
+Epoch 8/8
+
+Epoch 8: val_loss improved from 0.24622 to 0.24377, saving model to /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node//ctlearn_model/
+7463/7463 - 5975s - loss: 0.2436 - mae_direction: 0.2436 - val_loss: 0.2438 - val_mae_direction: 0.2438 - lr: 1.0000e-04 - 5975s/epoch - 801ms/step

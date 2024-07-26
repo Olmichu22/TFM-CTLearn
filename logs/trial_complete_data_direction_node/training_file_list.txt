@@ -1,0 +1,10 @@
+/fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs1-62.dl1.h5
+/fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs123-182.dl1.h5
+/fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs183-242.dl1.h5
+/fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs243-302.dl1.h5
+/fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs303-362.dl1.h5
+/fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs363-422.dl1.h5
+/fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs423-482.dl1.h5
+/fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs483-541.dl1.h5
+/fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs542-600.dl1.h5
+/fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs63-122.dl1.h5
