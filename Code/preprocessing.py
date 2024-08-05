@@ -18,7 +18,8 @@ class ImagetoPointCloud():
     def process_image(self, image):
         # Variables
         mask = np.ones((self.max_points, 1), dtype=np.float32)
-        features = np.zeros((self.max_points, 2), dtype=np.float32)
+        # Añadimos coordenadas a las características
+        features = np.zeros((self.max_points, 4), dtype=np.float32)
         points = np.zeros((self.max_points, 2), dtype=np.float32)
         
         # Generate the values
@@ -30,26 +31,34 @@ class ImagetoPointCloud():
         
         n_points = len(coords[:,0])
         if n_points < self.max_points:
-            mask[n_points:] = 0
-            
-            features[:n_points, 0] = pixel_values[coords[:, 0], coords[:, 1]]
-            features[:n_points, 1] = pick_time[coords[:, 0], coords[:, 1]]
-            features[n_points:,:] = 0
-            
             # Coordinates
             if self.relative_coords:
                 coords = coords - self.center
             points[:n_points, 0], points[:n_points, 1] =  coords[:, 0], coords[:, 1]
             points[n_points:,:] = 0
+
+            mask[n_points:] = 0
+            
+            features[:n_points, 0] = pixel_values[coords[:, 0], coords[:, 1]]
+            features[:n_points, 1] = pick_time[coords[:, 0], coords[:, 1]]
+            features[n_points:, 2] = coords[:, 0]
+            features[n_points:, 3] = coords[:, 1]
+            features[n_points:,:] = 0
+            
+
         
         elif n_points == self.max_points:
-            features[:,0] = pixel_values[coords[:, 0], coords[:, 1]]
-            features[:, 1] = pick_time[coords[:, 0], coords[:, 1]]
-            
             # Coordinates
             if self.relative_coords:
                 coords = coords - self.center
             points[:, 0], points[:, 1] =  coords[:, 0], coords[:, 1]
+            
+            features[:,0] = pixel_values[coords[:, 0], coords[:, 1]]
+            features[:, 1] = pick_time[coords[:, 0], coords[:, 1]]
+            features[:, 2] = coords[:, 0]
+            features[:, 3] = coords[:, 1]
+            
+
         
         else:
             raise ValueError(f"Number of selected points is greater than max_points {self.max_points}. Number of selected points : {n_points}")
