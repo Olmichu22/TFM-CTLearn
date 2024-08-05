@@ -2,7 +2,7 @@
 Data:
   event_info:
   - true_shower_primary_id
-  example_identifiers_file: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node//example_identifiers_file.h5
+  example_identifiers_file: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/pc_complete_data_type_node//example_identifiers_file.h5
   file_list:
   - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs1-62.dl1.h5
   - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs123-182.dl1.h5
@@ -28,8 +28,8 @@ Data:
   - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/Protons/proton_theta_23.161_az_99.261_runs833-1250.dl1.h5
   image_settings:
     image_channels:
-    - cleaned_image
-    - cleaned_peak_time
+    - image
+    - peak_time
   mapping_settings:
     camera_types:
     - LSTCam
@@ -62,35 +62,44 @@ Data:
 Input:
   batch_size_per_worker: 64
   stack_telescope_images: false
+  to_pc_options:
+    max_points: 250
+    point_cloud: true
+    relative_coords: true
 Logging:
-  model_directory: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node/
+  model_directory: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/pc_complete_data_type_node/
 Model:
   backbone:
-    function: single_cnn_model
-    module: single_cnn
+    function: get_particle_net
+    module: ParticleNet
   head:
     function: standard_head
     module: head
-  image_engine:
-    function: stacked_res_blocks
-    module: resnet
-  name: ThinResNet
 Model Parameters:
-  attention:
-    mechanism: Squeeze-and-Excitation
-    ratio: 16
-  resnet:
-    stacked_res_blocks:
-      architecture:
-      - blocks: 2
-        filters: 48
-      - blocks: 3
-        filters: 96
-      - blocks: 3
-        filters: 128
-      - blocks: 3
-        filters: 256
-      residual_block: bottleneck
+  EdgeConv:
+    BN: true
+    activation: relu
+    convparams:
+    - K: 16
+      channels:
+      - 64
+      - 64
+      - 64
+    - K: 16
+      channels:
+      - 128
+      - 128
+      - 128
+    - K: 16
+      channels:
+      - 256
+      - 256
+      - 256
+    pooling: average
+  FinalPool:
+    pooling: average
+  Mask:
+    shift: 999.0
   standard_head:
     direction:
       fc_head:
@@ -121,7 +130,3 @@ Training:
   validation_split: 0.1
   verbose: 2
   workers: 1
-
-Prediction:
-  prediction_file_lists:
-    /fefs/home/olmo.arqueropeinazo/DL2/data/proton_theta_10.0_az_102.199_runs1-750.dl2.h5: /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TestDataset/Protons/extra/

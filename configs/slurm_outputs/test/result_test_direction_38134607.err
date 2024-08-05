@@ -1,0 +1,35 @@
+2024-08-02 12:02:54.860558: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-08-02 12:02:55.126768: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-08-02 12:02:55.126820: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-08-02 12:02:55.126890: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-08-02 12:02:55.144219: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+usage: git ls-remote [--heads] [--tags]  [-u <exec> | --upload-pack <exec>]
+                     [-q|--quiet] [--exit-code] [--get-url] [<repository> [<refs>...]]
+usage: git ls-remote [--heads] [--tags]  [-u <exec> | --upload-pack <exec>]
+                     [-q|--quiet] [--exit-code] [--get-url] [<repository> [<refs>...]]
+Traceback (most recent call last):
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/bin/ctlearn", line 8, in <module>
+    sys.exit(main())
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/ctlearn/run_model.py", line 556, in main
+    config = yaml.safe_load(config_file)
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/yaml/constructor.py", line 51, in get_single_data
+    return self.construct_document(node)
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/yaml/constructor.py", line 60, in construct_document
+    for dummy in generator:
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/yaml/constructor.py", line 408, in construct_yaml_seq
+    data.extend(self.construct_sequence(node))
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/yaml/constructor.py", line 129, in construct_sequence
+    return [self.construct_object(child, deep=deep)
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/yaml/constructor.py", line 129, in <listcomp>
+    return [self.construct_object(child, deep=deep)
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/yaml/constructor.py", line 100, in construct_object
+    data = constructor(self, node)
+  File "/home/olmo.arqueropeinazo/miniconda3/envs/ctlearn-cluster/lib/python3.10/site-packages/yaml/constructor.py", line 427, in construct_undefined
+    raise ConstructorError(None, None,
+yaml.constructor.ConstructorError: could not determine a constructor for the tag 'tag:yaml.org,2002:python/object:dl1_data_handler.transforms.SkyOffsetSeparation'
+  in "/fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_direction_node/20240722_203850_config.yml", line 51, column 5

@@ -1,23 +1,18 @@
 # Training performed with CTLearn version 0.9.0 and TensorFlow version 2.14.1.
 Data:
   event_info:
+  - true_shower_primary_id
   - true_energy
-  example_identifiers_file: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy_node//example_identifiers_file.h5
+  - event_id
+  - obs_id
+  example_identifiers_file: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node//example_identifiers_file.h5
   file_list:
-  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs1-62.dl1.h5
-  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs123-182.dl1.h5
-  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs183-242.dl1.h5
-  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs243-302.dl1.h5
-  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs303-362.dl1.h5
-  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs363-422.dl1.h5
-  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs423-482.dl1.h5
-  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs483-541.dl1.h5
-  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs542-600.dl1.h5
-  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/gamma_theta_16.087_az_108.090_runs63-122.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TestDataset/Protons/extra/proton_theta_10.0_az_102.199_runs1-500.dl1.h5
+  - /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TestDataset/Protons/extra/proton_theta_10.0_az_102.199_runs501-750.dl1.h5
   image_settings:
     image_channels:
-    - cleaned_image
-    - cleaned_peak_time
+    - cleaned_cleaned_image
+    - cleaned_cleaned_peak_time
   mapping_settings:
     camera_types:
     - LSTCam
@@ -43,9 +38,55 @@ Data:
   parameter_selection:
   - col_name: hillas_intensity
     min_value: 50.0
+  parameter_settings:
+    parameter_list:
+    - obs_id
+    - event_id
+    - tel_id
+    - hillas_intensity
+    - hillas_skewness
+    - hillas_kurtosis
+    - hillas_fov_lon
+    - hillas_fov_lat
+    - hillas_r
+    - hillas_phi
+    - hillas_length
+    - hillas_length_uncertainty
+    - hillas_width
+    - hillas_width_uncertainty
+    - hillas_psi
+    - timing_intercept
+    - timing_deviation
+    - timing_slope
+    - leakage_pixels_width_1
+    - leakage_pixels_width_2
+    - leakage_intensity_width_1
+    - leakage_intensity_width_2
+    - concentration_cog
+    - concentration_core
+    - concentration_pixel
+    - morphology_n_pixels
+    - morphology_n_islands
+    - morphology_n_small_islands
+    - morphology_n_medium_islands
+    - morphology_n_large_islands
+    - intensity_max
+    - intensity_min
+    - intensity_mean
+    - intensity_std
+    - intensity_skewness
+    - intensity_kurtosis
+    - peak_time_max
+    - peak_time_min
+    - peak_time_mean
+    - peak_time_std
+    - peak_time_skewness
+    - peak_time_kurtosis
+    - core_psi
+  seed: 1234
   selected_telescope_types:
   - LST_LST_LSTCam
-  shuffle: true
+  shuffle: false
   transforms:
   - !!python/object:dl1_data_handler.transforms.LogEnergy
     description: []
@@ -70,7 +111,7 @@ Input:
   batch_size_per_worker: 64
   stack_telescope_images: false
 Logging:
-  model_directory: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_energy_node/
+  model_directory: /fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node/
 Model:
   backbone:
     function: single_cnn_model
@@ -114,8 +155,12 @@ Model Parameters:
       - 512
       - 256
       weight: 1.0
+Prediction:
+  prediction_file: /fefs/home/olmo.arqueropeinazo/DL2/data/proton_theta_10.0_az_102.199_runs1-750.dl2.h5
+  prediction_file_lists:
+    /fefs/home/olmo.arqueropeinazo/DL2/data/proton_theta_10.0_az_102.199_runs1-750.dl2.h5: /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TestDataset/Protons/extra/
 Reco:
-- energy
+- type
 Training:
   adam_epsilon: 1.0e-08
   base_learning_rate: 0.0001
@@ -128,7 +173,3 @@ Training:
   validation_split: 0.1
   verbose: 2
   workers: 1
-
-Prediction:
-  prediction_file_lists:
-    /fefs/home/olmo.arqueropeinazo/DL2/data/proton_theta_10.0_az_102.199_runs1-750.dl2.h5: /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TestDataset/Protons/extra/

@@ -1,0 +1,5 @@
+INFO:Logging has been correctly set up
+INFO:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0',)
+INFO:Number of devices: 1
+INFO:Loading data:
+INFO:  For a large dataset, this may take a while...

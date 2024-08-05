@@ -1,0 +1,25 @@
+2024-07-30 15:32:27.575165: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-07-30 15:32:27.628882: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-07-30 15:32:27.628928: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-07-30 15:32:27.628999: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-07-30 15:32:27.646337: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+usage: git ls-remote [--heads] [--tags]  [-u <exec> | --upload-pack <exec>]
+                     [-q|--quiet] [--exit-code] [--get-url] [<repository> [<refs>...]]
+usage: git ls-remote [--heads] [--tags]  [-u <exec> | --upload-pack <exec>]
+                     [-q|--quiet] [--exit-code] [--get-url] [<repository> [<refs>...]]
+usage: ctlearn [-h] [--config_file CONFIG_FILE] [--input INPUT [INPUT ...]]
+               [--pattern PATTERN [PATTERN ...]] [--mode MODE]
+               [--output OUTPUT] [--reco RECO [RECO ...]]
+               [--default_model DEFAULT_MODEL] [--clean | --no-clean]
+               [--nsb | --no-nsb]
+               [--trigger_patches_from_file | --no-trigger_patches_from_file]
+               [--pretrained_weights PRETRAINED_WEIGHTS]
+               [--prediction_directory PREDICTION_DIRECTORY]
+               [--tel_types TEL_TYPES [TEL_TYPES ...]]
+               [--allowed_tels ALLOWED_TELS [ALLOWED_TELS ...]]
+               [--size_cut SIZE_CUT] [--leakage_cut LEAKAGE_CUT]
+               [--multiplicity_cut MULTIPLICITY_CUT] [--num_epochs NUM_EPOCHS]
+               [--batch_size BATCH_SIZE] [--random_seed RANDOM_SEED]
+               [--log_to_file] [--save2onnx] [--debug]
+ctlearn: error: unrecognized arguments: --type direction

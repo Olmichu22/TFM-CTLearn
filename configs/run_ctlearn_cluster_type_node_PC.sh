@@ -16,7 +16,7 @@ echo "LD_LIBRARY_PATH: $LD_LIBRARY_PATH"
 
 
 # Comando para ejecutar ctlearn
-ctlearn --config_file "/fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/configs/ctlearn config/PN_complete_config.yml" -i "/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/GammaDiffuse/dec_2276/theta_16.087_az_108.090/" "/fefs/aswg/workspace/tjark.miener/DeepCrab/R1DL1/LSTProd2/TrainingDataset/Protons/dec_2276/theta_16.087_az_108.090/" -o "/fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/pc_complete_data_type_four_edgeconv/" -z 50 -e 15 -t LST_LST_LSTCam -b 24 --log_to_file -r type 
+ctlearn --config_file "/fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/configs/ctlearn config/PN_complete_config.yml" -i /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/GammasDiffuse/ /fefs/aswg/workspace/tjark.miener/DeepCrab_new/DL1/LSTProd2/TrainingDataset/Protons/ -p "*16.087_az_108.090*" "proton_theta_16.087_az_251.910*" "proton_theta_9.579_az_126.888*" "proton_theta_23.161_az_99.261*" -o "/fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/pc_complete_data_type_node/" -z 50 -e 8 -t LST_LST_LSTCam -b 64 --log_to_file -r type 
 
 # Desactivar el entorno
 conda deactivate

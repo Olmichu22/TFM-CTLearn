@@ -2,6 +2,7 @@ data/
 cudnn/
 
 example_identifiers_file.h5
+example_identifiers*
 
 logs/pc_complete_data_type/example_identifiers_file.h5
 logs/pc_complete_data_type_four_edgeconv/example_identifiers_file.h5

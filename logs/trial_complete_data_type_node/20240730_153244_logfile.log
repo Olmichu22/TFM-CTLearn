@@ -1,0 +1,13 @@
+INFO:Logging has been correctly set up
+INFO:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0', '/job:localhost/replica:0/task:0/device:GPU:1')
+INFO:Number of devices: 2
+INFO:Loading data:
+INFO:  For a large dataset, this may take a while...
+INFO:  Number of events loaded: 279912
+INFO:  Simulation info for pyirf.simulations.SimulatedEventsInfo: {'n_showers': 99800000.0, 'energy_range_min': 0.005, 'energy_range_max': 51.951, 'max_scatter_range': 720.0, 'spectral_index': -2.0, 'min_viewcone_radius': 0.0, 'max_viewcone_radius': 7.5, 'min_alt': 1.3962634, 'max_alt': 1.3962634}
+INFO:Setting up model:
+INFO:  Constructing model from config.
+INFO:  Loading weights from '/fefs/home/olmo.arqueropeinazo/TFM/TFM-CTLearn/logs/trial_complete_data_type_node//ctlearn_model/'.
+INFO:  Model has been correctly set up from config.
+INFO:  Compiling model.
+INFO:Predicting...
